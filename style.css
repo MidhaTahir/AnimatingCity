@@ -1,0 +1,41 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.background{
+    background: url(./images/back.jpg);
+    background-size: contain;
+    background-repeat: repeat-x;
+    height: 100vh;
+    animation: animate 15s linear infinite;
+}
+
+@keyframes animate{
+    from{
+        background-position: 1000% 0;
+    }
+    to{
+        background-position: 0 0;
+    }
+}
+
+.container{
+    position : absolute;
+    bottom: 20px;
+    left: 500px;
+}
+
+@keyframes guybrushWalk{
+    0% { background-position : 0 0;}
+    100% {background-position : -612px 0;}
+}
+.guybrush{
+    background: url(http://atomicrobotdesign.com/blog_media/css-sprite/walk-right.png) 0 0 repeat-x;
+    width : 100px;
+    height : 148px;
+    /* steps(6) as we have 6 frames */
+    animation : guybrushWalk 1s steps(6) infinite;
+}
+
+
